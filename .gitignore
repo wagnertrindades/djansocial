@@ -1,4 +1,6 @@
 *.tar.gz
+*.txt~
+
 pip-selfcheck.json
 
 bin/
