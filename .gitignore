@@ -1,0 +1,7 @@
+*.tar.gz
+pip-selfcheck.json
+
+bin/
+include/
+lib/
+local/
