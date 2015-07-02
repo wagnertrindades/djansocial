@@ -1,3 +1,1 @@
-#Installed
-Python 2.7.9
-Django==1.8.2
+Django==1.7.4

@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+
+{% block body %}
+	<header>
+		<nav class="navbar-inverse">
+			<div class="container">
+				<!-- Logo -->
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Djansocial</a>
+				</div>
+				<!-- Login -->
+				<div class="navbar-collapse collapse">
+					<form action="" class="navbar-form navbar-right">
+
+						<input type="text" class="form-group form-control" placeholder="Email">
+						<input type="text" class="form-group form-control" placeholder="Nome">
+						<button type="submit" class="btn btn-success">Logar</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Bem-vindo ao Djansocial</h1>
+				<p>Uma redesocial com feita principalmente em Django e Angular simplismente para estudar e praticar conhecimentos aprendidos nestes dois frameworks ;)</p>
+			</div>
+		</div>
+	</header>
+
+{% endblock %}
