@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+
+{% block body %}
+	<header>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Show Perfil</h1>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<li>Nome: {{perfil.nome}}</li>
+			<li>Email: {{perfil.email}}</li>
+		</div>
+	</main>
+
+
+{% endblock %}
