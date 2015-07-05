@@ -1,7 +1,7 @@
 # djansocial
-Social network project make in Django and Angular. 
+Social network project done in Django and Angular. 
 
-Only study and practice this frameworks.
+Only for to study and practice these frameworks.
 
 
 ##How to look project:
