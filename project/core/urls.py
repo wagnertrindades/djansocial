@@ -7,5 +7,4 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', 'project.core.views.index', name='index'),
-    url(r'^perfis/(?P<perfil_id>\d+)$', 'project.core.views.showPerfil', name='showPerfil'),
 )

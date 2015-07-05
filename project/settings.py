@@ -35,7 +35,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'project.core'  
+    'project.core',
+    'project.perfis'  
 )
 
 MIDDLEWARE_CLASSES = (

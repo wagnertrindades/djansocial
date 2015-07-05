@@ -6,7 +6,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('project.core.urls')),
-    url(r'^', include('project.perfis.urls')),
+    url(r'^perfis/(?P<perfil_id>\d+)$', 'project.perfis.views.showPerfil', name='showPerfil'),
 )
