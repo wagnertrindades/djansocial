@@ -11,6 +11,7 @@
 	<main>
 		<div class="container">
 			<div class="row">
+				<!-- My Perfil -->
 				<div class="col-md-4">
 					<div class="panel panel-info">
 						<div class="panel-heading">
@@ -31,6 +32,29 @@
 						</div>
 					</div>
 				</div>
+				<!-- /My Perfil -->
+
+				<!-- Perfis to add -->
+				<div class="col-md-4">
+					<div class="list-group">
+
+						{% if allPerfis %}
+							{% for perfil in allPerfis %}
+								<div class="list-group-item">
+									{{ perfil.nome }}
+									<a href="{% url 'showPerfil' perfil.id %}" class="btn btn-info">Ver Perfil</a>
+									<a href="#" class="btn btn-success">Add Perfil</a>
+								</div>
+							{% endfor %}
+						{% else %}
+							<div class="list-group-item">
+								Não temos mais perfis cadastrados.
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+				<!-- /Perfis to add -->
 			</div>
 		</div>
 	</main>

@@ -4,4 +4,6 @@ from project.perfis.models import Perfil
 def showPerfil(resquest, perfil_id):
 
 	perfil = Perfil.objects.get(id=perfil_id)
-	return render(resquest, 'perfis/perfis.html', { 'perfil' : perfil })
+	allPerfis = Perfil.objects.all()
+
+	return render(resquest, 'perfis/perfis.html', { 'perfil' : perfil, 'allPerfis' : allPerfis })
