@@ -10,15 +10,28 @@
 	</header>
 	<main>
 		<div class="container">
-			<img src="" alt="Imagem Perfil">		
-			<li>Nome: {{perfil.nome}}</li>
-			<li>Email: {{perfil.email}}</li>
-			<li>Data de nascimento {{perfil.dtNascimento}}</li>
-			<li>Mora em {{perfil.localidade}}</li>
-			<li>Trabalha de {{perfil.cargo}} na {{perfil.empresa}}</li>
-			<li>Estuda {{perfil.curso}} na {{perfil.escola}}</li>
-			<li>Cadastrado em {{perfil.dtCadastro}}</li>
-			<a href="#" class="btn btn-primary">Editar Perfil</a>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Meu Perfil</h3>
+						</div>
+						<div class="panel-body">
+							<img src="" alt="Imagem Perfil">
+							<ul class="list-group">
+								<li class="list-group-item">Nome: {{perfil.nome}}</li>
+								<li class="list-group-item">Email: {{perfil.email}}</li>
+								<li class="list-group-item">Data de nascimento {{perfil.dtNascimento}}</li>
+								<li class="list-group-item">Mora em {{perfil.localidade}}</li>
+								<li class="list-group-item">Trabalha de {{perfil.cargo}} na {{perfil.empresa}}</li>
+								<li class="list-group-item">Estuda {{perfil.curso}} na {{perfil.escola}}</li>
+								<li class="list-group-item">Cadastrado em {{perfil.dtCadastro}}</li>
+							</ul>		
+							<a href="#" class="btn btn-primary">Editar Perfil</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 
