@@ -2,11 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'project.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+    url(r'^', include('project.core.urls', namespace='core')),
+    url(r'^perfis/', include('project.perfis.urls', namespace='perfis')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('project.core.urls')),
-    url(r'^', include('project.perfis.urls')),
 )

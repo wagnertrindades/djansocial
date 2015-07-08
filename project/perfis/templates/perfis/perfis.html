@@ -28,7 +28,7 @@
 								<li class="list-group-item">Estuda {{perfil.curso}} na {{perfil.escola}}</li>
 								<li class="list-group-item">Cadastrado em {{perfil.dtCadastro}}</li>
 							</ul>		
-							<a href="{% url 'convidar' perfil.id %}" class="btn btn-success">Add Perfil</a>
+							<a href="{% url 'perfis:convidar' perfil.id %}" class="btn btn-success">Add Perfil</a>
 						</div>
 					</div>
 				</div>

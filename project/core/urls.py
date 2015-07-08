@@ -1,11 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from project.core import views
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'project.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-    url(r'^$', views.index, name='index'),
+urlpatterns = patterns('project.core.views',
+    url(r'^$', 'index', name='index'),
 )

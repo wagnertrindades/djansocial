@@ -26,23 +26,8 @@
 			</div>
 		</div>
 		<div class="container">
-			{% if perfis %}
-				<h2>Veja nossos já usuários cadastrados:</h2>
-				<div class="row">
-					{% for perfil in perfis %}
-						<div class="col-lg-4 itens-perfil">
-							<a href="{% url 'showPerfil' perfil.id %}">{{ perfil.nome }} <span class="btn btn-info">Ver Perfil</span></a>
-						</div>
-					{% endfor%}
-				</div>
-				<p>Aproveite e se cadastre também!!!</p>
-			{% else %}
-				<h2>Ainda não temos nenhum usuário cadastrado.</h2>
-				<p>Aproveite e seja o primeiro a se cadastrar :D</p>
-
-			{% endif %}
+			<p>Faça parte dessa rede social...</p>
 			<a href="#" class="btn btn-primary">Cadastrar</a>
 		</div>
 	</header>
-
 {% endblock %}

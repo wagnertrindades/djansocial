@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block body %}
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Perfil List</h1>
+		</div>
+	</div>
+
+	<div class="container">
+		{% if perfis %}
+			<h2>Veja nossos já usuários cadastrados:</h2>
+			<div class="row">
+				{% for perfil in perfis %}
+					<div class="col-lg-4 itens-perfil">
+						<a href="{% url 'perfis:showPerfil' perfil.id %}">{{ perfil.nome }} <span class="btn btn-info">Ver Perfil</span></a>
+					</div>
+				{% endfor%}
+			</div>
+		{% else %}
+			<h2>Ainda não temos mais nenhum usuário cadastrado.</h2>
+			<p>Aproveite e...</p>
+		
+		{% endif %}
+		<p>Convide um amigo para entrar em nossa rede social</p>
+		<a href="#" class="btn btn-primary">Convidar um amigo</a>
+	</div>
+
+{% endblock %}
