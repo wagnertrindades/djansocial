@@ -3,10 +3,9 @@ from django.utils import timezone
 
 class Perfil(models.Model):
 
-	name = models.CharField('Nome', max_length=100)
-	slug = models.SlugField('Atalho')
+	nome = models.CharField('Nome', max_length=100)
 	email = models.CharField('E-mail', max_length=100)
-	dtNascimento = models.DateField('Data de Nascimento')
+	dtNascimento = models.CharField('Data de Nascimento', max_length=10)
 	localidade = models.CharField('Localidade',max_length=255, blank=True)
 	cargo = models.CharField('Cargo', max_length=155, null=True)
 	empresa = models.CharField('Empresa', max_length=155, null=True)
