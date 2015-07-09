@@ -16,7 +16,12 @@ class Perfil(models.Model):
     dtAtualizacao = models.DateTimeField('Atualizado em', auto_now=True)
     
     def __str__(self):
-        return self.name
+        return self.nome
+    
+    class Meta:
+        verbose_name = 'Perfil'
+        verbose_name_plural = 'Perfis'
+        ordering = ['nome']
 
     def convidar(self, perfil_convidado):
         Convite(solicitante=self, convidado=perfil_convidado).save()
