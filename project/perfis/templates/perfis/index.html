@@ -9,20 +9,17 @@
 	</div>
 
 	<div class="container">
-		{% if perfis %}
-			<h2>Veja nossos já usuários cadastrados:</h2>
-			<div class="row">
-				{% for perfil in perfis %}
-					<div class="col-lg-4 itens-perfil">
-						<a href="{% url 'perfis:showPerfil' perfil.id %}">{{ perfil.nome }} <span class="btn btn-info">Ver Perfil</span></a>
-					</div>
-				{% endfor %}
-			</div>
-		{% else %}
-			<h2>Ainda não temos mais nenhum usuário cadastrado.</h2>
-			<p>Aproveite e...</p>
-		
-		{% endif %}
+		<h2>Veja nossos já usuários cadastrados:</h2>
+		<div class="row">
+			{% for perfil in perfis %}
+				<div class="col-lg-4 itens-perfil">
+					<a href="{{ perfil.get_absolute_url }}">{{ perfil.nome }} <span class="btn btn-info">Ver Perfil</span></a>
+				</div>
+			{% empty %}
+				<h2>Ainda não temos mais nenhum usuário cadastrado.</h2>
+				<p>Aproveite e...</p>
+			{% endfor %}
+		</div>
 		<p>Convide um amigo para entrar em nossa rede social</p>
 		<a href="#" class="btn btn-primary">Convidar um amigo</a>
 	</div>
