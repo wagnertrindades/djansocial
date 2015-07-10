@@ -1,13 +1,21 @@
 from django.shortcuts import render
-from project.perfis.models import Perfil 
+from project.perfis.models import Perfil
 
 def indexPerfil(resquest):
-	allPerfis = Perfil.objects.all()
-	return render(resquest, 'perfis/index.html', { 'perfis' : allPerfis })
+	perfis = Perfil.objects.all()
+    template_name = 'perfis/index.html'
+    context =  { 
+        'perfis' : perfis 
+    }
+	return render(resquest, template_name, context)
 
 def showPerfil(resquest, perfil_id):
 	perfil = Perfil.objects.get(id=perfil_id)
-	return render(resquest, 'perfis/perfis.html', { 'perfil' : perfil })
+    template_name = 'perfis/perfis.html'
+    context = {
+        'perfil' : perfil
+    }
+	return render(resquest, template_name, context)
 
 def convidar(resquest, perfil_id):
 	perfil_a_convidar = Perfil.objects.get(id=perfil_id)
