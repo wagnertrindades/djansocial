@@ -20,7 +20,7 @@ class Perfil(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('perfis:showPerfil', (), { 'perfil_id' : self.id })
+        return ('perfis:index', (), { 'perfil_id' : self.id })
 
     class Meta:
         verbose_name = 'Perfil'

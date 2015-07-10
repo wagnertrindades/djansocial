@@ -1,17 +1,17 @@
 from django.shortcuts import render
 from project.perfis.models import Perfil
 
-def indexPerfil(resquest):
+def showPerfis(resquest):
     perfis = Perfil.objects.all()
-    template_name = 'perfis/index.html'
+    template_name = 'perfis/perfis.html'
     context =  { 
         'perfis' : perfis 
     }
     return render(resquest, template_name, context)
 
-def showPerfil(resquest, perfil_id):
+def index(resquest, perfil_id):
     perfil = Perfil.objects.get(id=perfil_id)
-    template_name = 'perfis/perfis.html'
+    template_name = 'perfis/index.html'
     context = {
         'perfil' : perfil
     }

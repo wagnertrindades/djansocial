@@ -1,27 +1,49 @@
-{% extends 'core/base.html' %}
+{% extends "core/base.html" %}
+
+{% load static %}
 
 {% block body %}
-	
-	<div class="jumbotron">
+	<header>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Index Perfil</h1>
+			</div>
+		</div>
+	</header>
+	<main>
 		<div class="container">
-			<h1>Perfil List</h1>
-		</div>
-	</div>
+			<div class="row">
+				<!-- My Perfil -->
+				<div class="col-md-4">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="panel-title">Perfil</h3>
+						</div>
+						<div class="panel-body">
 
-	<div class="container">
-		<h2>Veja nossos já usuários cadastrados:</h2>
-		<div class="row">
-			{% for perfil in perfis %}
-				<div class="col-lg-4 itens-perfil">
-					<a href="{{ perfil.get_absolute_url }}">{{ perfil.nome }} <span class="btn btn-info">Ver Perfil</span></a>
+							{% if perfil.foto %}
+								<img src="{{ perfil.foto.url }}" alt="{{ perfil }}">
+							{% else %}
+								<img src="{% static "img/foto-masc.jpg" %}" alt="Sem foto">
+							{% endif %}
+							
+							<ul class="list-group">
+								<li class="list-group-item">Nome: {{perfil.nome}}</li>
+								<li class="list-group-item">Email: {{perfil.email}}</li>
+								<li class="list-group-item">Data de nascimento {{perfil.dtNascimento}}</li>
+								<li class="list-group-item">Mora em {{perfil.localidade}}</li>
+								<li class="list-group-item">Trabalha de {{perfil.cargo}} na {{perfil.empresa}}</li>
+								<li class="list-group-item">Estuda {{perfil.curso}} na {{perfil.escola}}</li>
+								<li class="list-group-item">Cadastrado em {{perfil.dtCadastro}}</li>
+							</ul>		
+							<a href="{% url 'perfis:convidar' perfil.id %}" class="btn btn-success">Add Perfil</a>
+						</div>
+					</div>
 				</div>
-			{% empty %}
-				<h2>Ainda não temos mais nenhum usuário cadastrado.</h2>
-				<p>Aproveite e...</p>
-			{% endfor %}
+				<!-- /My Perfil -->
+			</div>
 		</div>
-		<p>Convide um amigo para entrar em nossa rede social</p>
-		<a href="#" class="btn btn-primary">Convidar um amigo</a>
-	</div>
+	</main>
+
 
 {% endblock %}
